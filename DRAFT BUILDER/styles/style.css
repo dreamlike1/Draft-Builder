@@ -1,0 +1,179 @@
+/* Basic body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center; /* Center text horizontally */
+}
+
+.ui.container {
+    width: 95% !important;
+}
+
+/* Style for the grid container */
+.ui.grid.container {
+    width: 0%; /* Adjust width as needed (e.g., 90% of the viewport width) */
+    max-width: 500px; /* Set a maximum width */
+    padding: 0; /* Remove padding from the grid container */
+}
+
+/* Style for the two-column grid */
+.ui.two.column.stackable.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Equal width for both columns */
+    gap: 0; /* Remove space between columns */
+    width: 500%; /* Ensure the grid takes full width of its container */
+}
+
+/* Style for the segment boxes */
+.ui.segment {
+    padding: 20px; /* Adjust padding inside the segment */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Add a shadow for a lifted effect */
+    border-radius: 8px; /* Optional: Rounded corners */
+    display: flex;
+    flex-direction: column; /* Ensure content inside is stacked vertically */
+    margin: 0; /* Remove margin to ensure segments are flush with the grid */
+    height: 100%;
+}
+
+/* Style for the heading */
+h1 {
+    font-size: 28px; /* Increase font size for the heading */
+    margin-bottom: 20px; /* Adjust margin below the heading */
+    text-align: center; /* Center text horizontally */
+}
+
+.ui.header {
+    padding: 10px;
+}
+
+/* Style for form container */
+.ui.form {
+    margin: 0; /* Remove margin */
+    width: 100%; /* Ensure full width of the form container */
+}
+
+/* Style for form elements */
+.field {
+    margin-bottom: 0; /* Remove margin between fields */
+    display: flex;
+    flex-direction: column; /* Stack label and input vertically */
+    align-items: flex-start; /* Align items to the left */
+    width: 100%; /* Ensure full width of the form container */
+}
+
+/* Style for labels */
+label {
+    font-weight: bold;
+    font-size: 14px; /* Increase font size */
+    margin-bottom: 10px; /* Space between label and input */
+    text-align: left; /* Align label text to the left */
+    width: 100%; /* Full width to align left */
+}
+
+/* Style for text input fields */
+input[type="text"] {
+    width: 100%; /* Full width of the input container */
+    padding: 12px; /* Increase padding inside the input */
+    box-sizing: border-box;
+    margin: 0; /* Remove margin around input */
+}
+
+/* Style for the output div */
+#output {
+    width: 100%; /* Full width of the field container */
+    min-height: 700px; /* Ensure a minimum height for the output */
+    border: 1px solid #ddd; /* Optional: Add a border for better visibility */
+    padding: 20px; /* Increase padding inside the output */
+    box-sizing: border-box;
+    white-space: pre-wrap; /* Preserve whitespace formatting */
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    text-align: left; /* Align text to the left */
+    margin: 0; /* Remove margin around output */
+}
+
+/* Ensure the dropdown placeholder text is visible */
+.ui.dropdown .default.text {
+    color: lightgray !important; /* Light gray color for placeholder */
+}
+
+/* Style the dropdown to adjust width */
+.ui.dropdown {
+    width: 100%; /* Full width of the dropdown container */
+    margin: 0; /* Remove margin around dropdown */
+}
+
+/* Adjust the width of the dropdown menu */
+.ui.dropdown .menu {
+    width: 100% !important; /* Match the width of the dropdown input box */
+}
+
+/* Style for checkbox label */
+.ui.checkbox label {
+    font-weight: normal !important;
+    cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+    margin: 0;
+}
+
+.ui.checkbox {
+    margin-top: 5px;
+}
+
+.ui.checkbox input {
+    margin-left: 0;
+}
+
+/* Style for toast messages */
+.ui.toast.message {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #21ba45; /* Green color for success */
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    opacity: 1; /* Always fully visible */
+    transition: none; /* No transition effect */
+}
+
+/* Success toast */
+.ui.toast.success {
+    background-color: #21ba45; /* Green color for success */
+}
+
+/* Error toast */
+.ui.toast.error {
+    background-color: #db2828; /* Red color for error */
+}
+
+/* Warning toast */
+.ui.toast.warning {
+    background-color: #fbbd08; /* Yellow color for warning */
+}
+
+/* Info toast */
+.ui.toast.info {
+    background-color: #2185d0; /* Blue color for info */
+}
+
+/* Style for the action input container */
+.ui.action.input {
+    display: flex;
+    align-items: center;
+}
+
+/* Ensure the button aligns correctly with the dropdown */
+.ui.action.input .ui.button.icon {
+    margin-left: 0.5em; /* Adjust spacing as needed */
+}
+
+/* Optional: Adjust the button size if necessary */
+.ui.button.icon {
+    padding: 0.5em; /* Adjust padding if necessary */
+}

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draft Builder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.8/semantic.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.8/semantic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script type="module" src="js/main.js" defer></script>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="ui container">
+        <h1 class="ui header">Draft Builder</h1>
+        <div class="ui two column grid">
+            <div class="column">
+                <div class="ui segment">
+                    <div class="ui form">
+
+                        <!-- Draft Type Dropdown with Icon Button -->
+                        <div class="field">
+                            <label for="draft-type-dropdown">Draft Type:</label>
+                            <div class="ui action fluid input">
+                                <div class="ui fluid search selection dropdown" id="draft-type-dropdown">
+                                    <input type="hidden" name="draft-type-dropdown">
+                                    <i class="dropdown icon"></i>
+                                    <div class="default text">Select Draft Type</div>
+                                    <div class="menu">
+                                        <!-- Options will be populated dynamically -->
+                                    </div>
+                                </div>
+                                <button class="ui red button icon" id="draft-type-icon-button">
+                                    <i class="icon minus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- User Input Field -->
+                        <div class="field">
+                            <label for="user">User:</label>
+                            <input type="text" id="user" placeholder="Enter user">
+                        </div>
+
+                        <!-- Order ID Input Field -->
+                        <div class="field">
+                            <label for="order-id">Order ID:</label>
+                            <input type="text" id="order-id" placeholder="Enter order ID">
+                        </div>
+
+                        <!-- Intro Dropdown with Icon Button -->
+                        <div class="field">
+                            <label for="aer-dropdown">Select Intro:</label>
+                            <div class="ui action fluid input">
+                                <div class="ui fluid search selection dropdown" id="aer-dropdown">
+                                    <input type="hidden" name="aer-dropdown">
+                                    <i class="dropdown icon"></i>
+                                    <div class="default text">Select Intro</div>
+                                    <div class="menu">
+                                        <!-- Options will be populated dynamically -->
+                                    </div>
+                                </div>
+                                <button class="ui red button icon" id="intro-icon-button">
+                                    <i class="icon minus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Intro 2 Dropdown with Icon Button -->
+                        <div class="field">
+                            <label for="intro2-dropdown">Intro Suffix:</label>
+                            <div class="ui action fluid input">
+                                <div class="ui fluid search selection dropdown" id="intro2-dropdown">
+                                    <input type="hidden" name="intro2-dropdown">
+                                    <i class="dropdown icon"></i>
+                                    <div class="default text">Select Suffix</div>
+                                    <div class="menu">
+                                        <!-- Options will be populated dynamically -->
+                                    </div>
+                                </div>
+                                <button class="ui red button icon" id="intro2-icon-button">
+                                    <i class="icon minus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Error Dropdown with Icon Button -->
+                        <div class="field">
+                            <label for="error-dropdown">Select Error:</label>
+                            <div class="ui action fluid input">
+                                <div class="ui fluid search selection dropdown" id="error-dropdown">
+                                    <input type="hidden" name="error-dropdown">
+                                    <i class="dropdown icon"></i>
+                                    <div class="default text">Select Error</div>
+                                    <div class="menu">
+                                        <!-- Options will be populated dynamically -->
+                                    </div>
+                                </div>
+                                <button class="ui red button icon" id="error-icon-button">
+                                    <i class="icon minus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Italicized Text and Checkbox for "Insert Guides" -->
+                        <div class="field">
+                            <div class="ui right aligned checkbox">
+                                <input type="checkbox" id="insert-guides">
+                                <label for="insert-guides">Insert guides</label>
+                            </div>
+                        </div>
+
+                        <!-- Resolution Dropdown with Icon Button -->
+                        <div class="field">
+                            <label for="resolution-dropdown">Select Resolution:</label>
+                            <div class="ui action fluid input">
+                                <div class="ui fluid search selection dropdown" id="resolution-dropdown">
+                                    <input type="hidden" name="resolution-dropdown">
+                                    <i class="dropdown icon"></i>
+                                    <div class="default text">Select Resolution</div>
+                                    <div class="menu">
+                                        <!-- Options will be populated dynamically -->
+                                    </div>
+                                </div>
+                                <button class="ui red button icon" id="resolution-icon-button">
+                                    <i class="icon minus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Outro Dropdown with Icon Button -->
+                        <div class="field">
+                            <label for="outro-dropdown">Select Outro:</label>
+                            <div class="ui action fluid input">
+                                <div class="ui fluid search selection dropdown" id="outro-dropdown">
+                                    <input type="hidden" name="outro-dropdown">
+                                    <i class="dropdown icon"></i>
+                                    <div class="default text">Select Outro</div>
+                                    <div class="menu">
+                                        <!-- Options will be populated dynamically -->
+                                    </div>
+                                </div>
+                                <button class="ui red button icon" id="outro-icon-button">
+                                    <i class="icon minus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Closing Dropdown with Icon Button -->
+                        <div class="field">
+                            <label for="closing-dropdown">Select Closing:</label>
+                            <div class="ui action fluid input">
+                                <div class="ui fluid search selection dropdown" id="closing-dropdown">
+                                    <input type="hidden" name="closing-dropdown">
+                                    <i class="dropdown icon"></i>
+                                    <div class="default text">Select Closing</div>
+                                    <div class="menu">
+                                        <!-- Options will be populated dynamically -->
+                                    </div>
+                                </div>
+                                <button class="ui red button icon" id="closing-icon-button">
+                                    <i class="icon minus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Name Input Field -->
+                        <div class="field">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" placeholder="Enter name">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Output Section -->
+            <div class="column">
+                <div class="ui segment">
+                    <label for="output">Output:</label>
+                    <div id="output"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
