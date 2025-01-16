@@ -19,11 +19,11 @@ export const ERROR_MESSAGES = {
     'IDM (Multi)': "Upon checking, some elements in the design are **placed too close to the margin or binding**.",
     'Incorrect Orientation': "Upon review, one of the panels in your design is **incorrectly oriented** and needs to be rotated.",
     'Misaligned Trifold': "Upon checking, we noticed that your trifold brochure design isn't aligned with the folded sections that make up each brochure panel, which may cause folding and/or trimming issues.",
-    'Uneven Trimming': "Upon review, it appears that a production error has caused a trimming issue.<br>",
+    'Uneven Trimming': "Upon review, _/TRIMMING_ISSUE_MACRO_INSERT_.<br>",
     'Unmatched Colors': "The element has a background color that doesn’t match the design’s background color. It's recommended to update the design to use the same HEX code **INSERT_HEX** for both the element and the image background.",
     'Unmatched Blacks': "The black background in the image doesn’t match the rest of the design, making it look off in print. The design must be adjusted to ensure that the color of the image blends nicely with the background.",
     'Color Issues': "Upon review, it appears that a color issue occurred during production.<br>",
-    'Production Error': "Upon checking, it appears that a production error has caused this issue.<br>" // New error message
+    'Production Error': "Upon checking, _/QUALITY_ISSUE_MACRO_INSERT_.<br>" // New error message
 };
 
 // Error Additional Info
